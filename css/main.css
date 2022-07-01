@@ -9,7 +9,6 @@
 
 html,
 body {
-  overflow-x: hidden;
   line-height: 1.5;
 }
 
@@ -66,6 +65,41 @@ li {
 .container {
   width: clamp(16rem, 90vw, 70rem);
   margin: 0 auto;
+}
+
+.btn__primary-outline, .btn__primary, .btn {
+  display: inline-block;
+  padding: 0.5em 2em;
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 0.275em;
+  border: none;
+  outline: none;
+  background: transparent;
+  margin: 0.25em 0;
+  -webkit-transition: opacity 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+.btn__primary-outline:active, .btn__primary:active, .btn:active {
+  outline: none;
+  -webkit-transform: scale(0.92);
+          transform: scale(0.92);
+}
+.btn__primary-outline:hover, .btn__primary:hover, .btn:hover {
+  opacity: 0.8;
+}
+
+.btn__primary {
+  background-color: #007ea7;
+  color: #ebebeb;
+}
+
+.btn__primary-outline {
+  background: transparent;
+  border: 1px solid #ebebeb;
+  color: #ebebeb;
 }
 
 .nav {
@@ -127,6 +161,7 @@ li {
   pointer-events: none;
   -webkit-transition: all 500ms;
   transition: all 500ms;
+  z-index: 10;
 }
 .nav .dropdown li {
   cursor: pointer;
@@ -180,6 +215,7 @@ li {
   .nav__list {
     position: absolute;
     left: 0;
+    z-index: 100;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -226,5 +262,115 @@ li {
   }
   .nav .dropdown a {
     color: #ebebeb;
+  }
+}
+.hero {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+.hero #prevBtn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ebebeb;
+  padding: 1em;
+}
+.hero #nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ebebeb;
+  padding: 1em;
+}
+.hero .pagination {
+  position: absolute;
+  top: 87%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.hero .circle {
+  cursor: pointer;
+  width: 0.5em;
+  height: 0.5em;
+  margin-right: 0.5em;
+  border-radius: 50%;
+  background-color: #ebebeb;
+  opacity: 0.5;
+  z-index: 10;
+}
+.hero .circle--active {
+  opacity: 1;
+}
+.hero .circle:last-child {
+  margin-right: 0;
+}
+.hero__slides {
+  width: 100%;
+  min-height: 20em;
+}
+.hero__slide {
+  width: 100%;
+  position: absolute;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-transition: -webkit-transform 1s linear;
+  transition: -webkit-transform 1s linear;
+  transition: transform 1s linear;
+  transition: transform 1s linear, -webkit-transform 1s linear;
+}
+.hero__title {
+  font-family: "Yellowtail", cursive;
+  font-size: 3.5rem;
+  color: #ebebeb;
+}
+.hero__subtitle {
+  font-family: 2rem;
+  color: #ebebeb;
+  margin-bottom: 1em;
+}
+.hero__slide1 {
+  background: url("../images/gulmarg.webp") no-repeat center center/cover, -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)));
+  background: url("../images/gulmarg.webp") no-repeat center center/cover, linear-gradient(to bottom rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-blend-mode: overlay;
+}
+.hero__slide2 {
+  background: url("../images/pehalgam.webp") no-repeat center center/cover, -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background: url("../images/pehalgam.webp") no-repeat center center/cover, linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-blend-mode: overlay;
+}
+.hero__slide3 {
+  background: url("../images/sonamarg.webp") no-repeat center center/cover, -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background: url("../images/sonamarg.webp") no-repeat center center/cover, linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-blend-mode: overlay;
+}
+
+@media only screen and (min-width: 900px) {
+  .hero__slides {
+    min-height: 28em;
+  }
+  .hero__title {
+    font-size: 5rem;
+  }
+  .hero__subtitle {
+    font-size: 1.25rem;
   }
 }
