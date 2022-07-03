@@ -534,3 +534,10 @@ li {
 .booking input:focus {
   outline: 1px solid #007ea7;
 }
+.booking input[type=date]::before {
+  color: #999;
+  content: attr(placeholder);
+}
+.booking input[type=date]:focus::before {
+  content: "" !important;
+}
