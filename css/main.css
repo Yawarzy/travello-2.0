@@ -456,10 +456,6 @@ li {
   grid-area: eight;
 }
 
-body {
-  height: 10000px;
-}
-
 .booking {
   padding: 2em 0;
   position: relative;
