@@ -483,6 +483,10 @@ li {
   gap: 0.5em;
 }
 @media screen and (min-width: 900px) {
+  .booking .booking h4,
+.booking .booking .divider {
+    display: none;
+  }
   .booking .booking__form {
     position: absolute;
     top: -100%;
