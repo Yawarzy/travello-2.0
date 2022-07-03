@@ -83,23 +83,114 @@
       </div>
       <div class="hero__slides">
         <div class="hero__slide hero__slide1">
-          <h1 class="hero__title">Gulmarg</h1>
-          <p class="hero__subtitle">Most famous skiing resort of India</p>
-          <a href="#" class="btn__primary-outline">Explore</a>
+          <div class="hero__content">
+            <h1 class="hero__title">Gulmarg</h1>
+            <p class="hero__subtitle">Most famous skiing resort of India</p>
+            <a href="#" class="btn__primary-outline">Explore</a>
+          </div>
         </div>
         <div class="hero__slide hero__slide2">
-          <h1 class="hero__title">Pahalgam</h1>
-          <p class="hero__subtitle">Romantic trip with your loved ones</p>
-          <a href="#" class="btn__primary-outline">Explore</a>
+          <div class="hero__content">
+            <h1 class="hero__title">Pahalgam</h1>
+            <p class="hero__subtitle">Romantic trip with your loved ones</p>
+            <a href="#" class="btn__primary-outline">Explore</a>
+          </div>
         </div>
         <div class="hero__slide hero__slide3">
-          <h1 class="hero__title">Sonamarg</h1>
-          <p class="hero__subtitle">Known as Meadow of Gold</p>
-          <a href="#" class="btn__primary-outline">Explore</a>
+          <div class="hero__content">
+            <h1 class="hero__title">Sonamarg</h1>
+            <p class="hero__subtitle">Known as Meadow of Gold</p>
+            <a href="#" class="btn__primary-outline">Explore</a>
+          </div>
         </div>
       </div>
     </header>
     <!-- Hero End -->
+
+    <!-- Form Start -->
+    <section class="booking">
+      <div class="container">
+        <h3>Book Now</h3>
+        <div class="divider"></div>
+        <form class="booking__form">
+          <div class="booking__form__group">
+            <label for="package"> Select Your Package </label>
+            <select name="package" id="package" required>
+              <option value="0" selected disabled>-- Select Package --</option>
+              <option value="1">Royal Kashmir (3 Nights and 4 Days)</option>
+              <option value="2">Kashmir Touch (4 Nights and 5 Days)</option>
+              <option value="3">Valley Delight (5 Nights and 6 Days)</option>
+              <option value="4">Kashmir Voyage (6 Nights and 7 Days)</option>
+              <option value="5">Honeymoon Special (6 Nights and 7 Days)</option>
+            </select>
+          </div>
+          <div class="booking__form__group">
+            <label for="travelDate"> Travel Date </label>
+            <input type="date" name="travelDate" id="travelDate" required />
+          </div>
+          <div class="booking__form__group">
+            <label for="adults"> Adults </label>
+            <select name="adults" id="adults" required>
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="moreThan5">5+</option>
+            </select>
+          </div>
+          <div class="booking__form__group">
+            <label for="children"> Children </label>
+            <select name="children" id="children" required>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="moreThan5">5+</option>
+            </select>
+          </div>
+          <div class="booking__form__group">
+            <label for="name"> Name </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="booking__form__group">
+            <label for="email"> Email </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="booking__form__group">
+            <label for="phone"> Phone </label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Phone"
+              required
+            />
+          </div>
+          <div class="booking__form__group">
+            <label for=""></label>
+            <button class="btn__primary" id="bookingBtn" type="submit">
+              Enquire
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Form End -->
 
     <script src="./js/app.js"></script>
   </body>
