@@ -638,7 +638,7 @@ li {
 @media screen and (min-width: 900px) {
   .kashmir__grid {
     grid-template-areas: "one two" "three four" "five six";
-    grid-auto-rows: 25em;
+    grid-auto-rows: 1fr;
     grid-auto-columns: 1fr;
   }
 
