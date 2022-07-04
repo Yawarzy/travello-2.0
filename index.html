@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@300;400&family=Yellowtail&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Poppins:wght@300;400&family=Yellowtail&display=swap"
       rel="stylesheet"
     />
     <!-- Google Fonts -->
@@ -126,10 +126,18 @@
           </div>
           <div class="booking__form__group">
             <label for="travelDate"> Travel Date </label>
-            <input type="date" name="travelDate" id="travelDate" required />
+            <input
+              type="text"
+              name="travelDate"
+              id="travelDate"
+              placeholder="dd/mm/yyyy"
+              onfocus="this.type = 'date'"
+              onblur="this.type = 'text'"
+              required
+            />
           </div>
           <div class="booking__form__group">
-            <label for="adults"> Adults </label>
+            <label for="adults">Adults </label>
             <select name="adults" id="adults" required>
               <option value="1">1</option>
               <option value="2" selected>2</option>
@@ -184,13 +192,61 @@
           <div class="booking__form__group">
             <label for=""></label>
             <button class="btn__primary" id="bookingBtn" type="submit">
-              Enquire
+              Book <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
         </form>
       </div>
     </section>
     <!-- Form End -->
+
+    <!-- Why Choose Kashmir Start -->
+    <section class="kashmir">
+      <h3 class="section__title">Why Choose Kashmir</h3>
+      <div class="section__divider divider"></div>
+      <div class="kashmir__grid">
+        <article class="kashmir__feature">
+          <h3>Places To Stay</h3>
+          <p>
+            So you've planned your dream vacation to Kashmir, but where to stay?
+            Whether you are just staying overnight for a good night's sleep
+            before embarking on a big Kashmir's adventure, or staying for a week
+            or more, the options for lodging are plentiful.
+          </p>
+        </article>
+        <img src="./images/feature-1.webp" alt="Mosque" class="kashmir__img" />
+        <img
+          src="./images/feature-2.webp"
+          alt="Horses in grassland"
+          class="kashmir__img"
+        />
+        <article class="kashmir__feature">
+          <h3>Things To Do</h3>
+          <p>
+            Kashmir is huge! When planning your trip allow enough time for the
+            regions you want to see and things you want to do. All you need to
+            do is determine what type of activities and adventures top your must
+            do list and choose the regions that offer those experiences.
+          </p>
+        </article>
+        <article class="kashmir__feature">
+          <h3>Experience</h3>
+          <p>
+            Kashmir is a grand India Vacation destination you don't want to
+            miss! Take our help to plan your travel to Kashmir. Create a
+            personal itinerary and get special deals on an unforgettable
+            adventure to Kashmir! Get a taste of the diversity of life in
+            kashmir.
+          </p>
+        </article>
+        <img
+          src="./images/feature-3.webp"
+          alt="grassland and mountains"
+          class="kashmir__img"
+        />
+      </div>
+    </section>
+    <!-- Why Choose Kashmir End -->
 
     <script src="./js/app.js"></script>
   </body>
