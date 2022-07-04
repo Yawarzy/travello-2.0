@@ -635,7 +635,7 @@ li {
   display: grid;
   grid-template-areas: "one" "two" "four" "three" "five" "six";
   grid-auto-columns: 1fr;
-  grid-auto-rows: auto;
+  grid-auto-rows: 1fr;
 }
 
 @media screen and (min-width: 900px) {
