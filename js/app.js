@@ -2,6 +2,8 @@
 const nav = document.querySelector(".nav");
 const hamburger = document.querySelector(".nav__hamburger");
 const navLinks = document.querySelector(".nav__list");
+///////////////// Loader
+const loader = document.querySelector(".loader__wrapper");
 
 const setNavListPosition = function () {
   // setNavListPosition in Mobile
@@ -15,7 +17,12 @@ const toggleMenu = function () {
 };
 
 // eventlisteners
-window.addEventListener("DOMContentLoaded", setNavListPosition);
+window.addEventListener("DOMContentLoaded", () => {
+  setNavListPosition();
+  setTimeout(() => {
+    loader.classList.add("loader__hide");
+  }, 1500);
+});
 
 window.addEventListener("resize", setNavListPosition);
 
