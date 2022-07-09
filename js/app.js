@@ -19,8 +19,10 @@ const toggleMenu = function () {
 // eventlisteners
 window.addEventListener("DOMContentLoaded", () => {
   setNavListPosition();
+  document.body.parentNode.style.overflowY = "hidden";
   setTimeout(() => {
     loader.classList.add("loader__hide");
+    document.body.parentNode.style.overflowY = "auto";
   }, 1500);
 });
 
