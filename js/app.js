@@ -30,6 +30,27 @@ window.addEventListener("resize", setNavListPosition);
 
 hamburger.addEventListener("click", toggleMenu);
 
+// ////////////// Sticky nav
+const hero = document.querySelector(".hero");
+
+const headerObserver = new IntersectionObserver(
+  (entries) => {
+    const entry = entries[0];
+    if (!entry.isIntersecting) {
+      nav.classList.add("nav__scrolled");
+    } else {
+      nav.classList.remove("nav__scrolled");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${nav.clientHeight}px`,
+  }
+);
+
+headerObserver.observe(hero);
+
 //////////////// Hero Slider
 const slider = document.querySelector(".hero__slides");
 const slides = document.querySelectorAll(".hero__slide");
