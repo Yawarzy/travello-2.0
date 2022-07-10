@@ -719,10 +719,11 @@ li {
   }
 
   .kashmir__feature {
-    padding: 6em;
+    padding: 6em 3em;
   }
   .kashmir__feature p {
-    padding: 0 5em;
+    max-width: 40ch;
+    margin: auto;
   }
 }
 .footer {
