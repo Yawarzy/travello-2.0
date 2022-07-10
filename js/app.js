@@ -2,6 +2,31 @@
 const nav = document.querySelector(".nav");
 const hamburger = document.querySelector(".nav__hamburger");
 const navLinks = document.querySelector(".nav__list");
+
+//////////////////////// Dropdown
+const dropdownParent = document.querySelector(".dropdown__js");
+const dropdownChild = document.querySelector(".dropdown");
+const dropdownIcon = document.querySelector(".fa-caret-down");
+
+// Dropdown open
+dropdownParent.addEventListener("mouseover", () => {
+  console.log("hey");
+  dropdownChild.classList.remove("hide__dropdown");
+
+  if (window.innerWidth >= 900) {
+    dropdownIcon.style.transform = "rotate(180deg)";
+  }
+});
+
+//Dropdownclose
+dropdownParent.addEventListener("mouseout", () => {
+  if (dropdownChild.classList.contains("hide__dropdown")) return;
+  dropdownChild.classList.add("hide__dropdown");
+  if (window.innerWidth >= 900) {
+    dropdownIcon.style.transform = "rotate(0)";
+  }
+});
+
 ///////////////// Loader
 const loader = document.querySelector(".loader__wrapper");
 
